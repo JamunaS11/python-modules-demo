@@ -1,0 +1,37 @@
+import random
+name1= input("Enter the player1 name: ")
+name2= input("Enter the player2 name: ")
+d1=random.randint(1,25)
+d2=random.randint(1,25)
+s1=25
+s2=25
+print("___PLAYER 1 HAS TO GUESS___")
+while (True):
+    g=int(input("Enter a number: "))
+    if(g==d1):
+        s1=s1-1
+        break
+    elif(g<d1):
+        print("Your guess is less!")
+        s1=s1-1
+    else:
+        print("Your guess is more!")
+        s1=s1-1
+print("___PLAYER 2 HAS TO GUESS___")
+while (True):
+    g=int(input("Enter a number: "))
+    if(g==d1):
+        s2=s2-1
+        break
+    elif(g<d1):
+        print("Your guess is less!")
+        s2=s2-1
+    else:
+        print("Your guess is more!")
+        s2=s2-1
+if s1==s2:
+    print("The match is draw")
+elif(s1<s2):
+    print("Player 2 is the Winner!!!")
+else:
+    print("Player 1 is the Winner!!!")
