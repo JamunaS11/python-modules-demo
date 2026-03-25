@@ -1,0 +1,12 @@
+import qrcode
+x=qrcode.QRCode()
+upi_id="enter your upi"
+name="your banking name"
+note="your note"
+amount="10000"
+link=f"upi://pay?pa={upi_id}&pn={name}&tn{note}&am{amount}&cu=INR"
+x.add_data(link)
+x.make(fit=True)
+res=x.make_image(fill_color="black",back_color="white")
+res.save("upiqr.png")
+print("Created!!!")
