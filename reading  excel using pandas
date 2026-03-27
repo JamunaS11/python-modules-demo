@@ -1,0 +1,5 @@
+import pandas as pd
+a=pd.read_excel("data.xlsx")
+print(a)
+for i in range(len(a)):
+    print(a.loc[i,"name"])
